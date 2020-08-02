@@ -2,12 +2,10 @@ package com.abcnull.common;
 
 import com.abcnull.util.PropertiesReader;
 import com.abcnull.util.RedisUtil;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import redis.clients.jedis.Jedis;
 
@@ -37,6 +35,12 @@ public class BrowserCommon {
      * 脚本
      */
     protected JavascriptExecutor je;
+    /**
+     * 下拉列表框
+     */
+    protected Select  select;
+
+    protected  Alert alert;
 
     /**
      * 显示等待
@@ -122,6 +126,7 @@ public class BrowserCommon {
         WebElement buttonElement = locateElement(locator);
         wait.until(ExpectedConditions.elementToBeClickable(locator));
         buttonElement.click();
+        buttonElement.submit();
         return buttonElement;
     }
 
@@ -136,6 +141,7 @@ public class BrowserCommon {
         WebElement inputElement = locateElement(locator);
         inputElement.clear();
         inputElement.sendKeys(content);
+        inputElement.sendKeys(Keys.ENTER);
         return inputElement;
     }
 

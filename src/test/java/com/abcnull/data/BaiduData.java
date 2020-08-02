@@ -17,4 +17,9 @@ public class BaiduData {
      * "abcnull"
      */
     public static final String TEXT = "abcnull";
+
+    /**
+     * "pinaan"
+     */
+    public static final String PINANTEXT = "pinaan";
 }

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="WebUI Test Suite" parallel="tests" thread-count="1">
-
+    <!-- test测试  -->
+    <test name="test测试" preserve-order="true">
+        <classes>
+            <class name="com.abcnull.testcase.TestCase">
+                <methods>
+                    <!-- 搜索测试 -->
+                    <include name="testSearch"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>

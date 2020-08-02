@@ -19,4 +19,7 @@ public class BaiduLocator {
      * 百度首页搜索按钮定位
      */
     public static final By SEARCH_BUTTON = By.xpath("//input[@id='su']");
+    public static final By SEARCH_href = By.linkText("平安保险官网");
+    public static final By SEARCH_BUTTON_BY_CSS_SELECOER = By.xpath("//*[@id=\"q9sgvs\"]/div/h2/a");
+
 }
