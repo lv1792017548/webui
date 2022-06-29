@@ -27,7 +27,7 @@
         <extentreports-version>3.0.7</extentreports-version>
         <commons-pool2-version>2.6.1</commons-pool2-version>
         <jedis-version>3.0.1</jedis-version>
-        <poi-version>4.1.0</poi-version>
+        <poi-version>4.1.1</poi-version>
         <!-- jenkins 参数化构建 -->
         <xml.file>${env.xmlFileName}</xml.file>
         <param1>${env.param1}</param1>
